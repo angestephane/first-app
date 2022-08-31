@@ -1,8 +1,9 @@
+import Card from "../Card/Card";
 import DepenseItem from "../Depense_item_component/DepenseItem";
 import "./Depenses.css";
 function Depenses(props) {
   return (
-    <div className="depenses">
+    <Card className="depenses">
       <DepenseItem
         title={props.data[0].designationDepense}
         somme={props.data[0].somme}
@@ -26,7 +27,7 @@ function Depenses(props) {
         somme={props.data[3].somme}
         date={props.data[3].date}
       />
-    </div>
+    </Card>
   );
 }
 
