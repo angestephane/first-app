@@ -30,10 +30,14 @@ function App() {
     },
   ];
 
+  const addDepense = (__depense) => {
+    console.log(__depense);
+  };
+
   return (
     <div className="App">
       <div className="expenses">
-        <NouvelleDepense />
+        <NouvelleDepense getNewDepense={addDepense} />
         <Depenses data={data} />
       </div>
     </div>
