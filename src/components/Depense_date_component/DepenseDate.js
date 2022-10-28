@@ -1,7 +1,8 @@
 import "./DepenseDate.css";
 
-function DepenseDate(props) {
-  const mois = props.date.toLocaleString("fr-FR", { month: "long" });
+const DepenseDate = (props) => {
+  //Faite une doc sur la méthode toLocaleString()
+  const mois = props.date.toLocaleString("an-FR", { month: "long" });
   const jour = props.date.toLocaleString("fr-FR", { day: "2-digit" });
   const annee = props.date.getFullYear();
 
@@ -12,6 +13,6 @@ function DepenseDate(props) {
       <div className="depense-date__annee">{annee}</div>
     </div>
   );
-}
+};
 
 export default DepenseDate;
