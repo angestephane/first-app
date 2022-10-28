@@ -1,5 +1,3 @@
-import React, { useState } from "react";
-
 import "./DepenseItem.css";
 import DepenseDate from "../Depense_date_component/DepenseDate";
 import Card from "../Card/Card";
