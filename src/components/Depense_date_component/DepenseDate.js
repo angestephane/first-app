@@ -1,3 +1,6 @@
+import React from "react";
+import PropTypes from "prop-types";
+
 import "./DepenseDate.css";
 
 const DepenseDate = (props) => {
@@ -13,6 +16,10 @@ const DepenseDate = (props) => {
       <div className="depense-date__annee">{annee}</div>
     </div>
   );
+};
+
+DepenseDate.propTypes = {
+  date: PropTypes.object,
 };
 
 export default DepenseDate;

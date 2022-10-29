@@ -1,5 +1,7 @@
 import React from "react";
 
+import PropTypes from "prop-types";
+
 import DepenseForm from "./DepenseForm";
 import "./NouvelleDepense.css";
 
@@ -17,6 +19,10 @@ const NouvelleDepense = (props) => {
       <DepenseForm onSaveDepenseData={depenseHandler} />
     </div>
   );
+};
+
+NouvelleDepense.propTypes = {
+  getNewDepense: PropTypes.func,
 };
 
 export default NouvelleDepense;

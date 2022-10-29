@@ -1,3 +1,4 @@
+import React from "react";
 import "./App.css";
 import Depenses from "./components/Depense/Depenses";
 import NouvelleDepense from "./components/Nouvelle_depense/NouvelleDepense";

@@ -1,6 +1,8 @@
 import React from "react";
 import { useState } from "react";
 
+import PropTypes from "prop-types";
+
 import "./DepenseForm.css";
 
 const DepenseForm = (props) => {
@@ -70,6 +72,10 @@ const DepenseForm = (props) => {
       </div>
     </form>
   );
+};
+
+DepenseForm.propTypes = {
+  onSaveDepenseData: PropTypes.func,
 };
 
 export default DepenseForm;

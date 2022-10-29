@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./DepenseFilter.css";
 
 const DepenseFilter = (props) => {
@@ -21,6 +22,11 @@ const DepenseFilter = (props) => {
       </div>
     </div>
   );
+};
+
+DepenseFilter.propTypes = {
+  onDateFilter: PropTypes.func,
+  selected: PropTypes.string,
 };
 
 export default DepenseFilter;

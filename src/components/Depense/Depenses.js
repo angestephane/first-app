@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 
 import Card from "../Card/Card";
 import DepenseItem from "../Depense_item_component/DepenseItem";
 import DepenseFilter from "../Depense_filter/DepenseFilter";
 import "./Depenses.css";
+
 const Depenses = (props) => {
   //State management
   const [yearSelected, setYearSelected] = useState("2019");
@@ -43,4 +45,7 @@ const Depenses = (props) => {
   );
 };
 
+Depenses.propTypes = {
+  data: PropTypes.array,
+};
 export default Depenses;

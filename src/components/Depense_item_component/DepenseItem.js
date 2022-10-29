@@ -1,3 +1,5 @@
+import React from "react";
+import PropTypes from "prop-types";
 import "./DepenseItem.css";
 import DepenseDate from "../Depense_date_component/DepenseDate";
 import Card from "../Card/Card";
@@ -12,6 +14,12 @@ const DepenseItem = (props) => {
       <div className="expense-item__price">{props.somme}DH</div>
     </Card>
   );
+};
+
+DepenseItem.propTypes = {
+  date: PropTypes.object,
+  title: PropTypes.string,
+  somme: PropTypes.number,
 };
 
 export default DepenseItem;
