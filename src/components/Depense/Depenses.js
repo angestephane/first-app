@@ -12,35 +12,28 @@ const Depenses = (props) => {
 
   //Fonctions
   const dateFilterHandler = (__dateSelected) => {
+    console.log(__dateSelected);
     setYearSelected(__dateSelected);
   };
+
+  //Variables
+  const data = props.data;
+  const tmpData = data.filter((depense) => {
+    return depense.date.getFullYear().toString() === yearSelected;
+  });
 
   //Code JSX
   return (
     <Card className="depenses">
       <DepenseFilter selected={yearSelected} onDateFilter={dateFilterHandler} />
-      <DepenseItem
-        title={props.data[0].designationDepense}
-        somme={props.data[0].somme}
-        date={props.data[0].date}
-      />
-      <DepenseItem
-        title={props.data[1].designationDepense}
-        somme={props.data[1].somme}
-        date={props.data[1].date}
-      />
-
-      <DepenseItem
-        title={props.data[2].designationDepense}
-        somme={props.data[2].somme}
-        date={props.data[2].date}
-      />
-
-      <DepenseItem
-        title={props.data[3].designationDepense}
-        somme={props.data[3].somme}
-        date={props.data[3].date}
-      />
+      {tmpData.map((depense) => (
+        <DepenseItem
+          key={depense.id}
+          title={depense.title}
+          prix={depense.prix}
+          date={depense.date}
+        />
+      ))}
     </Card>
   );
 };

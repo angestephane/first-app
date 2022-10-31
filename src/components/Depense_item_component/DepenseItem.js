@@ -11,7 +11,7 @@ const DepenseItem = (props) => {
         <DepenseDate date={props.date} />
         <h2>{props.title}</h2>
       </div>
-      <div className="expense-item__price">{props.somme}DH</div>
+      <div className="expense-item__price">{props.prix}DH</div>
     </Card>
   );
 };
@@ -19,7 +19,7 @@ const DepenseItem = (props) => {
 DepenseItem.propTypes = {
   date: PropTypes.object,
   title: PropTypes.string,
-  somme: PropTypes.number,
+  prix: PropTypes.number,
 };
 
 export default DepenseItem;

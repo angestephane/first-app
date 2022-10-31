@@ -32,6 +32,7 @@ const DepenseForm = (props) => {
     };
 
     props.onSaveDepenseData(depenseData);
+
     setInputTitle("");
     setInputPrice("");
     setInputDate("");
