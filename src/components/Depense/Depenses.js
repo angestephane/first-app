@@ -8,7 +8,7 @@ import "./Depenses.css";
 
 const Depenses = (props) => {
   //State management
-  const [yearSelected, setYearSelected] = useState("2019");
+  const [yearSelected, setYearSelected] = useState("2022");
 
   //Fonctions
   const dateFilterHandler = (__dateSelected) => {
@@ -22,18 +22,26 @@ const Depenses = (props) => {
     return depense.date.getFullYear().toString() === yearSelected;
   });
 
+  let depenseContent = (
+    <p className="__data_not_found">Aucune dépense à afficher</p>
+  );
+
+  if (tmpData.length > 0) {
+    depenseContent = tmpData.map((depense) => (
+      <DepenseItem
+        key={depense.id}
+        title={depense.title}
+        prix={depense.prix}
+        date={depense.date}
+      />
+    ));
+  }
+
   //Code JSX
   return (
     <Card className="depenses">
       <DepenseFilter selected={yearSelected} onDateFilter={dateFilterHandler} />
-      {tmpData.map((depense) => (
-        <DepenseItem
-          key={depense.id}
-          title={depense.title}
-          prix={depense.prix}
-          date={depense.date}
-        />
-      ))}
+      {depenseContent}
     </Card>
   );
 };
