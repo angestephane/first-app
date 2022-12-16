@@ -27,7 +27,7 @@ const DepenseForm = (props) => {
 
     const depenseData = {
       title: titre,
-      prix: prix,
+      prix: +prix,
       date: new Date(date),
     };
 
@@ -62,13 +62,16 @@ const DepenseForm = (props) => {
           <input
             type="date"
             min="2020-01-01"
-            max="2022-10-31"
+            max="2024-12-31"
             value={date}
             onChange={dateChangeHandler}
           />
         </div>
       </div>
       <div className="new-expense__actions">
+        <button type="button" onClick={props.onCancel}>
+          Annuler
+        </button>
         <button type="submit">Ajouter depense</button>
       </div>
     </form>
@@ -77,6 +80,7 @@ const DepenseForm = (props) => {
 
 DepenseForm.propTypes = {
   onSaveDepenseData: PropTypes.func,
+  onCancel: PropTypes.func,
 };
 
 export default DepenseForm;
