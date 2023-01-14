@@ -1,1 +1,21 @@
+.app {
+  display: flex;
+  flex-direction: column;
+}
 
+.app-content {
+  flex-basis: 80%;
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.expense-liste {
+  flex-basis: 60%;
+}
+
+.right-side {
+  flex-basis: 25%;
+}

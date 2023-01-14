@@ -1,6 +1,9 @@
 .depenses {
-  padding: 1rem;
-  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1rem 0;
+  padding: 0 1rem;
 }
 
 .__data_not_found {

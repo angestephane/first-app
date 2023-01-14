@@ -24,6 +24,7 @@ DepenseItem.propTypes = {
   date: PropTypes.object,
   title: PropTypes.string,
   prix: PropTypes.number,
+  type: PropTypes.string,
 };
 
 export default DepenseItem;
